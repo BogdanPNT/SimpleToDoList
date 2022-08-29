@@ -1,0 +1,118 @@
+.sectionContainer{
+    min-height: 88vh;
+}
+
+.menuContainer{   
+    width: 80%;
+    margin: 2vh auto; 
+    min-width: 250px;
+
+    .menuBar{
+      display: flex;
+      justify-content: center;
+      margin: auto;
+    }
+  
+    .menuItems{
+      display: flex;
+      flex-direction: column;
+      border: 1px solid black;
+      padding: 5px;
+      border-radius: 5px;
+  
+      .menuWrapper{
+        display: flex;
+        flex-direction: row;
+        padding: 5px 0;
+
+        &.newListNameWrapper{
+            justify-content: space-between;
+            img{
+                display: block;
+                padding: 0 5px;
+            }
+
+            img:hover{
+                cursor: pointer;
+            }
+        }
+
+        &.newListBackgroundColorWrapper{
+            justify-content: space-between;
+        }
+
+      }
+
+    }
+} 
+
+.listsContainer{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+
+    .cardContainer{
+        padding: 5px;
+        border: 1px solid #000000;
+        border-radius: 5px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        
+        .cardTitle{
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .cardAddToList{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-self: center;
+
+            img{
+                max-width: 15%;
+            }
+            img:hover{
+                cursor: pointer;
+            }
+        }
+
+        .cardListContainer{
+            width: 100%;
+
+            & > ul{
+                padding: 5px;
+            }
+
+            .cardList{
+                display: flex;
+                flex-direction: column;
+
+                
+                & > li{
+                    padding: 5px;
+                    list-style: none;
+
+                    .checkbox {
+                        padding-right: 10px;
+                    }
+
+                    .listItemDescription{
+
+                        &.crossed{
+                            text-decoration: line-through; 
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
