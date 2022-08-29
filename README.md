@@ -8,3 +8,5 @@ cd ./SimpleToDoList
 yarn install
 yarn start
 ```
+
+Project built using "Webpack 4 + Bootstrap 4 + Handlebars" (https://github.com/statickidz/webpack-handlebars-bootstrap)
